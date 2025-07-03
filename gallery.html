@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sawirro - Maktabadda Qaranka Soomaaliya</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <style>
+    * {
+      box-sizing: border-box; margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #5dade2, #a9cce3);
+      color: #1b2631;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    header {
+      background: #117a8b; color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    header h1 { font-size: 1.8rem; }
+    nav a {
+      color: white; text-decoration: none;
+      margin-left: 1.5rem; font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      color: #f7dc6f; outline: none;
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .gallery {
+      display: flex; flex-wrap: wrap;
+      gap: 1.5rem; justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .gallery img {
+      width: 300px; height: 200px; object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover { transform: scale(1.05); }
+    table {
+      width: 100%; border-collapse: collapse;
+      background: rgba(255,255,255,0.9);
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    th, td {
+      padding: 1rem; text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    thead { background: #117a8b; color: white; }
+    tbody tr:nth-child(odd) { background: #f2f6f9; }
+    tbody tr:hover { background: #d6eaf8; }
+    footer {
+      background: #117a8b; color: white;
+      text-align: center; padding: 1rem;
+      font-size: 0.9rem;
+      box-shadow: inset 0 1px 3px rgba(255,255,255,0.3);
+    }
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      nav a { margin: 0.5rem; display: inline-block; }
+      .gallery img { width: 90%; height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maktabadda Qaranka Soomaaliya</h1>
+    <nav aria-label="Navigation">
+      <a href="index.html">Bogga Hore</a>
+      <a href="gallery.html">Sawirro</a>
+      <a href="booking.html">Diiwaangelin</a>
+      <a href="help.html">Caawimaad</a>
+      <a href="about.html">Nagu Saabsan</a>
+    </nav>
+  </header>
+  <main>
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" style="text-align:center; font-size:2rem; margin-bottom:1rem; color:#117a8b;">Sawirrada Maktabadda & Buugaagta</h2>
+      <img src="images/library1.jpg" alt="Qolka akhriska ee maktabadda" />
+      <img src="images/library2.jpg" alt="Buugaag kala duwan oo yaal shelf" />
+      <img src="images/library3.jpg" alt="Meesha waxbarashada ee maktabadda" />
+    </section>
+
+    <section aria-labelledby="table-title">
+      <h2 id="table-title" style="text-align:center; font-size:1.8rem; margin-bottom:1rem; color:#117a8b;">Macluumaadka Buugaagta Muhiimka ah</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Buug</th>
+            <th>Qoraa</th>
+            <th>Sanad</th>
+            <th>Xaalad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Taarikhda Soomaaliya</td>
+            <td>Dr. Axmed Cali</td>
+            <td>1995</td>
+            <td>La heli karo</td>
+          </tr>
+          <tr>
+            <td>Af-Soomaaliga Casriga</td>
+            <td>Fadumo Xasan</td>
+            <td>2010</td>
+            <td>La amaahday</td>
+          </tr>
+          <tr>
+            <td>Suugaanta Dhaqanka</td>
+            <td>Maxamed Cabdi</td>
+            <td>2005</td>
+            <td>La heli karo</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Maktabadda Qaranka Soomaaliya. Xuquuqda oo dhan way dhowrsan yihiin.
+  </footer>
+</body>
+</html>

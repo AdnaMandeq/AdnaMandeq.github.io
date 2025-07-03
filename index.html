@@ -1,130 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="so">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic Fire Pro Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maktabadda Qaranka Soomaaliya</title>
+  <link rel="icon" href="images/favicon.ico" />
   <style>
-    /* 🔥 Body with fire-like gradient animation */
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ffe0e9);
-      background-size: 400% 400%;
-      animation: fireGradient 15s ease infinite;
-      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #5dade2, #a9cce3);
+      color: #1b2631;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+    }
+    header {
+      background: #117a8b;
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: space-between;
       align-items: center;
     }
-
-    @keyframes fireGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px #0b3c4d;
     }
-
-    /* 🔮 Form with glassmorphism + glow */
-    .form-container {
-      background: rgba(255, 240, 250, 0.25);
-      border-radius: 20px;
-      backdrop-filter: blur(20px);
-      padding: 40px 30px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-      border: 1px solid rgba(255, 182, 193, 0.3);
-      animation: glow 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { box-shadow: 0 0 20px #ff80ab; }
-      to { box-shadow: 0 0 40px #ffa07a; }
-    }
-
-    h2 {
-      text-align: center;
-      color: #ff5e99;
-      margin-bottom: 25px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      color: #d63384;
-      font-weight: 600;
-    }
-
-    input[type="text"], input[type="email"], input[type="tel"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      background-color: rgba(255, 255, 255, 0.6);
-      color: #6a0d45;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    input::placeholder {
-      color: #aa4b7a;
-    }
-
-    input:focus {
-      border-color: #ff69b4;
-      background-color: #fff0f7;
-      outline: none;
-      box-shadow: 0 0 10px #ff69b4;
-    }
-
-    .btn {
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(90deg, #ff69b4, #ff85a2);
+    nav a {
       color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 15px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-
-    .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(90deg, #ff4d88, #ff99cc);
+    nav a:hover,
+    nav a:focus {
+      color: #f7dc6f;
+      outline: none;
     }
-
-    @media (max-width: 500px) {
-      .form-container {
-        padding: 30px 20px;
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: rgba(255 255 255 / 0.85);
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      padding: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: #117a8b;
+      text-shadow: 1px 1px 1px #aacde3;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #34495e;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    footer {
+      background: #117a8b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      box-shadow: inset 0 1px 3px rgba(255,255,255,0.3);
+    }
+    /* Responsive nav */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 0.5rem;
+        display: inline-block;
+      }
+      .hero h2 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
-
-<div class="form-container">
-  <h2>✨ Magic Fire Form ✨</h2>
-  <form action="#">
-    <label for="first-name">First Name</label>
-    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
-
-    <label for="last-name">Last Name</label>
-    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-    <label for="mobile">Mobile</label>
-    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile" required>
-
-    <button class="btn" type="submit">Submit 🔥</button>
-  </form>
-</div>
-
+  <header>
+    <h1>Maktabadda Qaranka Soomaaliya</h1>
+    <nav aria-label="Navigation">
+      <a href="index.html" tabindex="0">Bogga Hore</a>
+      <a href="gallery.html" tabindex="0">Sawirro</a>
+      <a href="booking.html" tabindex="0">Diiwaangelin</a>
+      <a href="help.html" tabindex="0">Caawimaad</a>
+      <a href="about.html" tabindex="0">Nagu Saabsan</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Ku Soo Dhawoow Maktabadda Qaranka Soomaaliya</h2>
+      <p>
+        Maktabaddani waa xarunta ugu weyn ee aqoonta iyo dhaqanka Soomaaliya.  
+        Halkan waxaad ka heli kartaa buugaag kala duwan, taariikhda hodanka ah, iyo adeegyo casri ah oo loogu talagalay dhammaan bulshada.
+      </p>
+      <p>
+        Nala soco safarka aqoonta iyo dhaqanka, waxaan kuu diyaarinay muuqaalada ugu quruxda badan iyo adeegyo fudud oo casri ah.
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Maktabadda Qaranka Soomaaliya. Xuquuqda oo dhan way dhowrsan yihiin.
+  </footer>
 </body>
 </html>

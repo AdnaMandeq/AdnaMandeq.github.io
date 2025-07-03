@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caawimaad - Maktabadda Qaranka Soomaaliya</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: linear-gradient(135deg, #5dade2, #a9cce3); color: #1b2631; min-height: 100vh; display: flex; flex-direction: column; }
+    header { background: #117a8b; color: white; padding: 1rem 2rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 1.8rem; }
+    nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: 600; transition: color 0.3s ease; }
+    nav a:hover, nav a:focus { color: #f7dc6f; outline: none; }
+    main { flex-grow: 1; padding: 2rem; max-width: 900px; margin: 0 auto; }
+    section { background: rgba(255,255,255,0.9); border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.2); padding: 2rem; margin-bottom: 2rem; }
+    section h2 { color: #117a8b; margin-bottom: 1rem; font-size: 1.8rem; }
+    section p, section li { font-size: 1.1rem; line-height: 1.6; margin-bottom: 0.8rem; }
+    footer { background: #117a8b; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; box-shadow: inset 0 1px 3px rgba(255,255,255,0.3); }
+    @media (max-width: 600px) { header { flex-direction: column; text-align: center; } nav a { margin: 0.5rem; display: inline-block; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maktabadda Qaranka Soomaaliya</h1>
+    <nav aria-label="Navigation">
+      <a href="index.html">Bogga Hore</a>
+      <a href="gallery.html">Sawirro</a>
+      <a href="booking.html">Diiwaangelin</a>
+      <a href="help.html">Caawimaad</a>
+      <a href="about.html">Nagu Saabsan</a>
+    </nav>
+  </header>
+  <main>
+    <section aria-labelledby="help-title">
+      <h2 id="help-title">Caawimaad iyo Tilmaamo Isticmaalka Bogga</h2>
+      <p>Ku soo dhawoow qeybta caawimaadda! Halkan waxaad ka heli kartaa tilmaamo ku saabsan sida loo isticmaalo mareegtan Maktabadda Qaranka Soomaaliya:</p>
+      <ul>
+        <li><strong>Bogga Hore:</strong> Waxaad ka heli doontaa warbixin guud oo ku saabsan maktabadda iyo adeegyada ay bixiso.</li>
+        <li><strong>Sawirro:</strong> Ku daawo sawirrada maktabadda iyo buugaagta, iyo macluumaad ku saabsan qaar ka mid ah buugaagta muhiimka ah.</li>
+        <li><strong>Diiwaangelin:</strong> Foomka diiwaangelinta ayaa kuu oggolaanaya inaad iska diiwaangeliso si aad u hesho adeegyada maktabadda ama u amaahato buugaag.</li>
+        <li><strong>Caawimaad:</strong> Qaybtan ayaa kuu sharaxaysa sida loo isticmaalo mareegta, meel walba oo aad u baahan tahay gargaar.</li>
+        <li><strong>Nagu Saabsan:</strong> Waxaad ka akhrisan kartaa xog ku saabsan taariikhda maktabadda iyo cidda sameysay boggan.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="forms-help">
+      <h2 id="forms-help">Tilmaamaha Foomka Diiwaangelinta</h2>
+      <ul>
+        <li>Buuxi magacaaga iyo magaalada aad degan tahay si sax ah.</li>
+        <li>Dooro nooca buugga aad xiiseyneyso adigoo isticmaalaya liiska hoos-u-dhaca (select).</li>
+        <li>Dooro jinsigaaga (Lab/Dheddig) adigoo raacaya batoonka wareega (radio).</li>
+        <li>Dooro hiwaayadahaaga haddii ay jiraan adigoo calaamadinaya sanduuqyada (checkbox).</li>
+        <li>Haddii aad leedahay wax fariin ah, isticmaal sanduuqa qoraalka (textarea).</li>
+        <li>Markaad dhamayso, riix badhanka "Gudbi" si aad u dirto xogtaada.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Maktabadda Qaranka Soomaaliya. Xuquuqda oo dhan way dhowrsan yihiin.
+  </footer>
+</body>
+</html>

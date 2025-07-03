@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diiwaangelin - Maktabadda Qaranka Soomaaliya</title>
+  <link rel="icon" href="images/favicon.ico" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: linear-gradient(135deg, #5dade2, #a9cce3); color: #1b2631; min-height: 100vh; display: flex; flex-direction: column; }
+    header { background: #117a8b; color: white; padding: 1rem 2rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 1.8rem; }
+    nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: 600; transition: color 0.3s ease; }
+    nav a:hover, nav a:focus { color: #f7dc6f; outline: none; }
+    main { flex-grow: 1; padding: 2rem; max-width: 700px; margin: 0 auto; }
+    form { background: rgba(255,255,255,0.9); border-radius: 12px; padding: 2rem; box-shadow: 0 6px 12px rgba(0,0,0,0.2); display: flex; flex-direction: column; gap: 1.2rem; }
+    fieldset { border: 1px solid #117a8b; border-radius: 8px; padding: 1rem; }
+    legend { font-weight: bold; color: #117a8b; padding: 0 0.5rem; }
+    label { margin-bottom: 0.3rem; display: block; font-weight: 600; }
+    input, select, textarea { width: 100%; padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc; }
+    input[type="radio"], input[type="checkbox"] { width: auto; margin-right: 0.5rem; }
+    button { background: #117a8b; color: white; border: none; padding: 1rem; font-size: 1rem; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; }
+    button:hover { background: #0b5d6b; }
+    footer { background: #117a8b; color: white; text-align: center; padding: 1rem; font-size: 0.9rem; box-shadow: inset 0 1px 3px rgba(255,255,255,0.3); }
+    @media (max-width: 600px) { header { flex-direction: column; text-align: center; } nav a { margin: 0.5rem; display: inline-block; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maktabadda Qaranka Soomaaliya</h1>
+    <nav aria-label="Navigation">
+      <a href="index.html">Bogga Hore</a>
+      <a href="gallery.html">Sawirro</a>
+      <a href="booking.html">Diiwaangelin</a>
+      <a href="help.html">Caawimaad</a>
+      <a href="about.html">Nagu Saabsan</a>
+    </nav>
+  </header>
+  <main>
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:1.5rem; color:#117a8b;">Foomka Diiwaangelinta</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Macluumaadkaaga</legend>
+        <label for="name">Magaca:</label>
+        <input type="text" id="name" name="name" placeholder="Magacaaga..." required />
+
+        <label for="city">Magaalada:</label>
+        <input type="text" id="city" name="city" placeholder="Magaaladaada..." required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Faahfaahinta Diiwaangelinta</legend>
+        <label for="genre">Nooca Buugga:</label>
+        <select id="genre" name="genre" required>
+          <option value="">Dooro...</option>
+          <option value="taariikh">Taariikh</option>
+          <option value="suugaan">Suugaan</option>
+          <option value="cilmi">Cilmi Baaris</option>
+          <option value="sheeko">Sheekooyin</option>
+        </select>
+
+        <label>Jinsiga:</label>
+        <label><input type="radio" name="gender" value="lab" required /> Lab</label>
+        <label><input type="radio" name="gender" value="dheddig" required /> Dheddig</label>
+
+        <label>Hiwaayadaha:</label>
+        <label><input type="checkbox" name="hobbies" value="akhriska" /> Akhriska</label>
+        <label><input type="checkbox" name="hobbies" value="cilmiga" /> Cilmiga</label>
+        <label><input type="checkbox" name="hobbies" value="qorista" /> Qorista</label>
+
+        <label for="comments">Fariin Dheeraad ah:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Halkan ku qor fariintaada..."></textarea>
+      </fieldset>
+
+      <button type="submit">Gudbi</button>
+    </form>
+  </main>
+  <footer>
+    &copy; 2025 Maktabadda Qaranka Soomaaliya. Xuquuqda oo dhan way dhowrsan yihiin.
+  </footer>
+</body>
+</html>
