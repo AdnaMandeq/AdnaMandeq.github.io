@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Fire Pro Form</title>
+  <style>
+    /* 🔥 Body with fire-like gradient animation */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #ffe0e9);
+      background-size: 400% 400%;
+      animation: fireGradient 15s ease infinite;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes fireGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🔮 Form with glassmorphism + glow */
+    .form-container {
+      background: rgba(255, 240, 250, 0.25);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+      border: 1px solid rgba(255, 182, 193, 0.3);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 20px #ff80ab; }
+      to { box-shadow: 0 0 40px #ffa07a; }
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff5e99;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #d63384;
+      font-weight: 600;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #6a0d45;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input::placeholder {
+      color: #aa4b7a;
+    }
+
+    input:focus {
+      border-color: #ff69b4;
+      background-color: #fff0f7;
+      outline: none;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #ff69b4, #ff85a2);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff4d88, #ff99cc);
+    }
+
+    @media (max-width: 500px) {
+      .form-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>✨ Magic Fire Form ✨</h2>
+  <form action="#">
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="mobile">Mobile</label>
+    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile" required>
+
+    <button class="btn" type="submit">Submit 🔥</button>
+  </form>
+</div>
+
+</body>
+</html>
